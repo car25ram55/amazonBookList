@@ -1,9 +1,14 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-function Greeting() {
-  return <h2>My First Component</h2>;
-}
+const Booklist = () => {
+  return <section>
+  <Book />
+  <Book />
+  <Book />
+  <Book />
+</section>;
+};
 
 const Book = () => {
   return (
@@ -15,12 +20,15 @@ const Book = () => {
   );
 };
 
-const Image = () => <h2>image placeholder</h2>;
-const Title = () => {
-  return <h2>Book Title</h2>;
-};
-const Author = () => <h4>Author</h4>;
+const Image = () => (
+<img 
+src="https://images-na.ssl-images-amazon.com/images/I/819bD-wfwoL._AC_UL300_SR300,200_.jpg"
+alt="Killers of the Flower Moon"
+/>
+);
+const Title = () => <h2>Killers of the Flower Moon</h2>;
+const Author = () => {return <h4>David Grann </h4>;}
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(<Greeting />);
+root.render(<Booklist />);
